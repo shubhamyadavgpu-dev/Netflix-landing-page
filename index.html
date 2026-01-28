@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="icon" type="image/png" href="https://assets.nflxext.com/us/ffe/siteui/common/icons/nficon2016.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <svg width="111" height="30" viewBox="0 0 111 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M105.062 14.28L111 15.004V0.028H105.062V14.28ZM100.655 0.028H94.655V15.004H100.655V0.028ZM90.062 0.028H84.062V15.004H90.062V0.028ZM79.655 0.028H73.655V15.004H79.655V0.028ZM69.062 0.028H63.062V15.004H69.062V0.028ZM58.655 0.028H52.655V15.004H58.655V0.028ZM48.062 0.028H42.062V15.004H48.062V0.028ZM37.655 0.028H31.655V15.004H37.655V0.028ZM27.062 0.028H21.062V15.004H27.062V0.028ZM16.655 0.028H10.655V15.004H16.655V0.028ZM6.062 0.028H0.062V15.004H6.062V0.028Z" fill="#E50914"/>
+                    <path d="M0 20.028H111V25.004H0V20.028Z" fill="#E50914"/>
+                </svg>
+            </div>
+            <div class="nav-right">
+                <div class="language-selector">
+                    <select id="language">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="fr">Français</option>
+                        <option value="de">Deutsch</option>
+                    </select>
+                </div>
+                <button class="sign-in-btn" id="signInBtn" data-translate="signIn">Sign In</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-background-banners">
+            <!-- Movie banners will be populated by JavaScript -->
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-translate="heroTitle">Unlimited movies, TV shows, and more</h1>
+            <p class="hero-subtitle" data-translate="heroSubtitle">Watch anywhere. Cancel anytime.</p>
+            <p class="hero-description" data-translate="heroDescription">Ready to watch? Enter your email to create or restart your membership.</p>
+            <form class="email-form" id="emailForm">
+                <div class="email-input-wrapper">
+                    <input type="email" id="emailInput" data-placeholder="emailPlaceholder" placeholder="Email address" required>
+                    <button type="submit" class="get-started-btn" data-translate="getStarted">Get Started <span>></span></button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="feature-card">
+            <div class="feature-content">
+                <h2 data-translate="feature1Title">Enjoy on your TV</h2>
+                <p data-translate="feature1Desc">Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+            </div>
+            <div class="feature-image">
+                <div class="tv-container">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/tv.png" alt="TV">
+                    <video class="tv-video" autoplay loop muted>
+                        <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-tv-0819.m4v" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-card reverse">
+            <div class="feature-content">
+                <h2 data-translate="feature2Title">Download your shows to watch offline</h2>
+                <p data-translate="feature2Desc">Save your favorites easily and always have something to watch.</p>
+            </div>
+            <div class="feature-image">
+                <div class="mobile-container">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/mobile-0819.jpg" alt="Mobile">
+                    <div class="download-box">
+                        <div class="download-box-image">
+                            <img src="https://upload.wikimedia.org/wikipedia/en/0/0c/Spiderman2002poster.jpg" alt="Spider-Man">
+                        </div>
+                        <div class="download-box-text">
+                            <div class="download-box-title">Stranger Things</div>
+                            <div class="download-box-subtitle" data-translate="downloading">Downloading...</div>
+                        </div>
+                        <div class="download-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-content">
+                <h2 data-translate="feature3Title">Watch everywhere</h2>
+                <p data-translate="feature3Desc">Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+            </div>
+            <div class="feature-image">
+                <div class="device-container">
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/device-pile.png" alt="Devices">
+                    <video class="device-video" autoplay loop muted>
+                        <source src="https://assets.nflxext.com/ffe/siteui/acquisition/ourStory/fuji/desktop/video-devices.m4v" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="feature-card reverse">
+            <div class="feature-content">
+                <h2 data-translate="feature4Title">Create profiles for kids</h2>
+                <p data-translate="feature4Desc">Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</p>
+            </div>
+            <div class="feature-image">
+                <img src="https://upload.wikimedia.org/wikipedia/en/e/ee/Superman_%281978_film_poster%29.jpg" alt="Superman">
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <h2 data-translate="faqTitle">Frequently Asked Questions</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-translate="faq1Question">What is Netflix?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="faq1Answer">Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-translate="faq2Question">How much does Netflix cost?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="faq2Answer">Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from $9.99 to $19.99 a month. No extra costs, no contracts.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-translate="faq3Question">Where can I watch?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="faq3Answer">Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-translate="faq4Question">How do I cancel?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="faq4Answer">Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-translate="faq5Question">What can I watch on Netflix?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p data-translate="faq5Answer">Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+            </div>
+        </div>
+        <form class="email-form" id="emailForm2">
+            <p class="hero-description" data-translate="heroDescription">Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="email-input-wrapper">
+                <input type="email" id="emailInput2" data-placeholder="emailPlaceholder" placeholder="Email address" required>
+                <button type="submit" class="get-started-btn" data-translate="getStarted">Get Started <span>></span></button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-top" data-translate="footerQuestions">Questions? Call 1-844-505-2993</p>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#" data-translate="footerFaq">FAQ</a>
+                    <a href="#" data-translate="footerInvestor">Investor Relations</a>
+                    <a href="#" data-translate="footerPrivacy">Privacy</a>
+                    <a href="#" data-translate="footerSpeed">Speed Test</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#" data-translate="footerHelp">Help Center</a>
+                    <a href="#" data-translate="footerJobs">Jobs</a>
+                    <a href="#" data-translate="footerCookie">Cookie Preferences</a>
+                    <a href="#" data-translate="footerLegal">Legal Notices</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#" data-translate="footerAccount">Account</a>
+                    <a href="#" data-translate="footerWays">Ways to Watch</a>
+                    <a href="#" data-translate="footerCorporate">Corporate Information</a>
+                    <a href="#" data-translate="footerOnly">Only on Netflix</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#" data-translate="footerMedia">Media Center</a>
+                    <a href="#" data-translate="footerTerms">Terms of Use</a>
+                    <a href="#" data-translate="footerContact">Contact Us</a>
+                </div>
+            </div>
+            <div class="language-selector-footer">
+                <select id="languageFooter">
+                    <option value="en">English</option>
+                    <option value="hi">हिंदी</option>
+                    <option value="fr">Français</option>
+                    <option value="de">Deutsch</option>
+                </select>
+            </div>
+            <p class="footer-country" data-translate="footerCountry">Netflix United States</p>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal" id="signInModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h1 data-translate="signIn">Sign In</h1>
+            <form id="signInForm">
+                <input type="email" data-placeholder="emailPhonePlaceholder" placeholder="Email or phone number" required>
+                <input type="password" data-placeholder="passwordPlaceholder" placeholder="Password" required>
+                <button type="submit" class="sign-in-submit" data-translate="signIn">Sign In</button>
+            </form>
+            <div class="modal-footer">
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember" data-translate="rememberMe">Remember me</label>
+                </div>
+                <a href="#" class="help-link" data-translate="needHelp">Need help?</a>
+            </div>
+            <div class="signup-link">
+                <p><span data-translate="newToNetflix">New to Netflix?</span> <a href="#" id="signUpLink" data-translate="signUpNow">Sign up now</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal -->
+    <div class="modal" id="signUpModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeSignUpModal">&times;</span>
+            <h1 data-translate="signUp">Sign Up</h1>
+            <form id="signUpForm">
+                <input type="text" data-placeholder="namePlaceholder" placeholder="Name" required>
+                <input type="email" data-placeholder="emailPhonePlaceholder" placeholder="Email or phone number" required>
+                <input type="password" id="signUpPassword" data-placeholder="passwordPlaceholder" placeholder="Password" required>
+                <!-- Password strength meter -->
+                <div class="password-strength" id="passwordStrength">
+                    <div class="meter"><div class="meter-fill" id="meterFill"></div></div>
+                    <div class="meter-text" id="meterText">&nbsp;</div>
+                </div>
+                <button type="submit" class="sign-in-submit" data-translate="signUp">Sign Up</button>
+            </form>
+            <div class="signup-link">
+                <p><span data-translate="alreadyHaveAccount">Already have an account?</span> <a href="#" id="signInLink" data-translate="signInNow">Sign in now</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Movies Section (Hidden by default, shown after login) -->
+    <section class="movies-section" id="moviesSection" style="display: none;">
+        <div class="movies-header">
+            <div class="logo">
+                <svg width="111" height="30" viewBox="0 0 111 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M105.062 14.28L111 15.004V0.028H105.062V14.28ZM100.655 0.028H94.655V15.004H100.655V0.028ZM90.062 0.028H84.062V15.004H90.062V0.028ZM79.655 0.028H73.655V15.004H79.655V0.028ZM69.062 0.028H63.062V15.004H69.062V0.028ZM58.655 0.028H52.655V15.004H58.655V0.028ZM48.062 0.028H42.062V15.004H48.062V0.028ZM37.655 0.028H31.655V15.004H37.655V0.028ZM27.062 0.028H21.062V15.004H27.062V0.028ZM16.655 0.028H10.655V15.004H16.655V0.028ZM6.062 0.028H0.062V15.004H6.062V0.028Z" fill="#E50914"/>
+                    <path d="M0 20.028H111V25.004H0V20.028Z" fill="#E50914"/>
+                </svg>
+            </div>
+            <div class="user-menu">
+                <span id="userEmail" class="user-email"></span>
+                <button class="sign-out-btn" id="signOutBtn" data-translate="signOut">Sign Out</button>
+            </div>
+        </div>
+        
+        <div class="movies-content">
+            <h2 class="movies-title" data-translate="freeMovies">Free Movies to Watch</h2>
+            
+            <!-- Hollywood Movies -->
+            <div class="movie-category">
+                <h3 class="category-title" data-translate="hollywoodClassics">Hollywood Classics</h3>
+                <div class="movie-row" id="hollywoodMovies">
+                    <!-- Movies will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Bollywood Movies -->
+            <div class="movie-category">
+                <h3 class="category-title" data-translate="bollywoodOld">Bollywood Old Movies</h3>
+                <div class="movie-row" id="bollywoodMovies">
+                    <!-- Movies will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
